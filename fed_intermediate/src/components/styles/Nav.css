@@ -1,0 +1,30 @@
+.nav-container {
+  margin: 5%;
+  border-bottom: 2px solid #eeecec;
+}
+.nav-menu-bar-container {
+  width: 70%;
+}
+ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 3% 0.2%;
+  list-style-type: none;
+  color: #eeecec;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  padding: 0;
+}
+
+li {
+  padding: 0.8%;
+  cursor: pointer;
+}
+
+.selected-li {
+  list-style-position: inside;
+  border: 1px solid #ffffff;
+}
