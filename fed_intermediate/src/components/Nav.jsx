@@ -1,20 +1,23 @@
 import React, { useState } from "react";
 import "./styles/Nav.css";
 
-const Nav = ({ selectedCategory, setSelectedCategory, menuBar }) => {
+const Nav = ({ categories, setCategories }) => {
+  const [selectedCategory, setSelectedCategory] = useState("All");
+
+  console.log("category", categories);
   return (
     <div className="nav-container">
       <h1>WORK</h1>
       <div className="nav-menu-bar-container">
         <ul>
-          {menuBar.map((menu) => {
+          {categories.map((category) => {
             return (
               <li
-                onClick={() => setSelectedCategory(menu)}
-                key={menu.id}
-                className={selectedCategory === menu ? "selected-li" : ""}
+                onClick={() => setSelectedCategory(category)}
+                key={category.id}
+                className={selectedCategory === category ? "selected-li" : ""}
               >
-                {menu}
+                {category}
               </li>
             );
           })}
