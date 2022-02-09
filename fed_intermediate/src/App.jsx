@@ -4,17 +4,9 @@ import CaseStudies from "./components/CaseStudies";
 import axios from "axios";
 import "./App.css";
 
-// const menuBar = [
-//   "all",
-//   "arts & culture",
-//   "non-profits",
-//   "publishing & education",
-//   "wellness",
-//   "sports",
-// ];
-
 function App() {
   const [categories, setCategories] = useState([]);
+  const [selectedCategory, setSelectedCategory] = useState("All");
   const [caseStudies, setCaseStudies] = useState([]);
 
   const fetchCategories = () => {
@@ -41,8 +33,16 @@ function App() {
 
   return (
     <div className="App">
-      <Nav categories={categories} setCategories={setCategories} />
-      <CaseStudies />
+      <Nav
+        categories={categories}
+        selectedCategory={selectedCategory}
+        setSelectedCategory={setSelectedCategory}
+      />
+      <CaseStudies
+        selectedCategory={selectedCategory}
+        caseStudies={caseStudies}
+        setCaseStudies={setCaseStudies}
+      />
     </div>
   );
 }
