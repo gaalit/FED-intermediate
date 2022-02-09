@@ -1,10 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import "./styles/Nav.css";
 
-const Nav = ({ categories, setCategories }) => {
-  const [selectedCategory, setSelectedCategory] = useState("All");
-
-  console.log("category", categories);
+const Nav = ({ categories, selectedCategory, setSelectedCategory }) => {
   return (
     <div className="nav-container">
       <h1>WORK</h1>
