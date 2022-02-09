@@ -1,13 +1,39 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React from "react";
 import CaseStudy from "./CaseStudy";
+import "./styles/CaseStudies.css";
 
-const CaseStudies = () => {
+const CaseStudies = ({ caseStudies, selectedCategory, setCaseStudies }) => {
   return (
-    <div>
-      {/* {caseStudy.map((caseStudy) => {
-        <CaseStudy caseStudy={caseStudy} />;
-      })} */}
+    <div className="case-studies-container">
+      {selectedCategory === "All"
+        ? caseStudies.map((caseStudy) => {
+            return (
+              <CaseStudy
+                key={caseStudy.id}
+                caseImage={caseStudy.thumbnail}
+                caseTitle={caseStudy.title}
+                caseLink={caseStudy.link}
+                caseExcerpt={caseStudy.excerpt}
+                caseCategory={caseStudy.categories[0].title}
+              />
+            );
+          })
+        : caseStudies
+            .filter(
+              (caseStudy) => caseStudy.categories[0].title === selectedCategory
+            )
+            .map((caseStudy) => {
+              return (
+                <CaseStudy
+                  key={caseStudy.id}
+                  caseImage={caseStudy.thumbnail}
+                  caseTitle={caseStudy.title}
+                  caseLink={caseStudy.link}
+                  caseExcerpt={caseStudy.excerpt}
+                  caseCategory={caseStudy.categories[0].title}
+                />
+              );
+            })}
     </div>
   );
 };
