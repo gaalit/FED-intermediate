@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Nav from "./components/Nav";
 import CaseStudies from "./components/CaseStudies";
+import useWindowDimensions from "./components/useWindowDimensions";
 import axios from "axios";
 import "./App.css";
 
@@ -8,6 +9,10 @@ function App() {
   const [categories, setCategories] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [caseStudies, setCaseStudies] = useState([]);
+
+  const { height, width } = useWindowDimensions();
+
+  console.log("heigh", height, "width", width);
 
   const fetchCategories = () => {
     axios

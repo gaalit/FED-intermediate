@@ -2,7 +2,6 @@ import React from "react";
 import CaseStudy from "./CaseStudy";
 import "./styles/CaseStudies.css";
 import noImage from "../assets/noImage.jpg";
-import asset1 from "../assets/asset1.svg";
 
 const CaseStudies = ({ caseStudies, selectedCategory, setCaseStudies }) => {
   return (
@@ -36,8 +35,6 @@ const CaseStudies = ({ caseStudies, selectedCategory, setCaseStudies }) => {
                 />
               );
             })}
-
-      {/* <div id="bottom-right-svg"></div> */}
     </div>
   );
 };
