@@ -26,6 +26,7 @@ span {
 
 .case-study-details-container {
   height: 80%;
+  overflow: hidden;
 }
 
 .case-study-image-wraper {
@@ -49,7 +50,7 @@ p {
 .case-study-link-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 20%;
+  padding-top: 20%;
 }
 
 button {
@@ -67,8 +68,6 @@ button {
 
 a {
   text-decoration: none;
-  color: inherit;
-
   color: white;
   line-height: 14px;
   text-decoration: none;
@@ -85,11 +84,16 @@ svg {
     width: 50%;
     flex-direction: row;
     justify-content: space-between;
-    padding: 0 2%;
+    padding: 0 1%;
   }
 
   .case-study-image-wraper {
     height: 100%;
     width: 100%;
+  }
+
+  .case-study-link-container {
+    position: sticky;
+    top: 60%;
   }
 }
