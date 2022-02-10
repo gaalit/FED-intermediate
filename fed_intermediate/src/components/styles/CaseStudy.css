@@ -31,6 +31,7 @@ span {
 
 .case-study-image-wraper {
   height: 30%;
+  z-index: 2;
 }
 
 img {
@@ -64,6 +65,7 @@ button {
   overflow: hidden;
   padding: 1%;
   font-weight: bold;
+  z-index: 2;
 }
 
 a {
@@ -72,10 +74,12 @@ a {
   line-height: 14px;
   text-decoration: none;
   z-index: 10;
+  background: transparent;
 }
 
 svg {
   font-size: 25px;
+  background: transparent;
 }
 
 @media only screen and (min-width: 1024px) {

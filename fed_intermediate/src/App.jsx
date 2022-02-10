@@ -33,6 +33,7 @@ function App() {
 
   return (
     <div className="App">
+      <div id="top-right-svg"></div>
       <Nav
         categories={categories}
         selectedCategory={selectedCategory}
@@ -43,6 +44,8 @@ function App() {
         caseStudies={caseStudies}
         setCaseStudies={setCaseStudies}
       />
+      <div id="bottom-left-svg"></div>
+      <div id="bottom-right-svg"></div>
     </div>
   );
 }
