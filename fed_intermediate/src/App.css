@@ -53,6 +53,8 @@ h1 {
   background-position: right bottom;
 }
 
+/* Desktop sizing */
+
 @media only screen and (min-width: 1024px) {
   .case-study-container {
     display: flex;
@@ -105,5 +107,67 @@ h1 {
     bottom: -5%;
     right: 0px;
     background-position: right bottom;
+  }
+
+  .case-study-container {
+    display: flex;
+    width: 50%;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0 1%;
+  }
+
+  .case-study-image-wraper {
+    height: 100%;
+    width: 100%;
+  }
+
+  .case-study-link-container {
+    position: sticky;
+    top: 60%;
+  }
+}
+
+/* Tablet size*/
+
+@media only screen and (min-width: 768px) and (max-width: 900px) {
+  h2 {
+    font-size: 35px;
+  }
+
+  p {
+    font-size: 25px;
+  }
+
+  span {
+    font-size: 20px;
+  }
+}
+
+/* Desktop size*/
+
+@media only screen and (min-width: 200px) and (max-width: 550px) {
+  h2 {
+    font-size: 18px;
+  }
+
+  p {
+    font-size: 15px;
+  }
+
+  span {
+    font-size: 14px;
+  }
+  .case-study-container {
+    margin: 25% 0;
+  }
+
+  .case-study-link-container {
+    padding-top: 30%;
+  }
+
+  .case-study-details-container {
+    height: 100%;
+    margin-top: 13%;
   }
 }

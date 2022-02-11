@@ -27,7 +27,9 @@ const CaseStudies = ({ caseStudies, selectedCategory, setCaseStudies }) => {
               return (
                 <CaseStudy
                   key={caseStudy.id}
-                  caseImage={caseStudy.thumbnail}
+                  caseImage={
+                    caseStudy.thumbnail ? caseStudy.thumbnail : noImage
+                  }
                   caseTitle={caseStudy.title}
                   caseLink={caseStudy.link}
                   caseExcerpt={caseStudy.excerpt}

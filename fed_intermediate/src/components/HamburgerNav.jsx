@@ -9,15 +9,17 @@ const HamburgerNav = ({
   return (
     <div className="hamburger-menu-bar-container">
       <ul>
-        {categories.map((category) => {
+        {categories.map((category, index) => {
           return (
-            <li
-              onClick={() => setSelectedCategory(category)}
-              key={category.id}
-              className={selectedCategory === category ? "selected-li" : ""}
-            >
-              {category}
-            </li>
+            <React.Fragment key={index}>
+              <li
+                onClick={() => setSelectedCategory(category)}
+                key={index}
+                className={selectedCategory === category ? "selected-li" : ""}
+              >
+                {category}
+              </li>
+            </React.Fragment>
           );
         })}
       </ul>

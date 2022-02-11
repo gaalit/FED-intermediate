@@ -12,10 +12,11 @@ const Nav = ({ categories, selectedCategory, setSelectedCategory }) => {
 
   const { width } = useWindowDimensions();
 
+  console.log(categories);
   return (
     <div className="nav-container">
       <h1>WORK</h1>
-      {width <= 750 ? (
+      {width <= 875 ? (
         <Hamburger
           categories={categories}
           selectedCategory={selectedCategory}
@@ -26,11 +27,11 @@ const Nav = ({ categories, selectedCategory, setSelectedCategory }) => {
       ) : (
         <div className="nav-menu-bar-container">
           <ul>
-            {categories.map((category) => {
+            {categories.map((category, index) => {
               return (
                 <li
+                  key={index}
                   onClick={() => setSelectedCategory(category)}
-                  key={category.id}
                   className={selectedCategory === category ? "selected-li" : ""}
                 >
                   {category}

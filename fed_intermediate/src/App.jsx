@@ -12,7 +12,7 @@ function App() {
 
   const { height, width } = useWindowDimensions();
 
-  console.log("heigh", height, "width", width);
+  console.log(height);
 
   const fetchCategories = () => {
     axios
@@ -38,7 +38,7 @@ function App() {
 
   return (
     <div className="App">
-      <div id="top-right-svg"></div>
+      {width <= 550 ? "" : <div id="top-right-svg"></div>}
       <Nav
         categories={categories}
         selectedCategory={selectedCategory}

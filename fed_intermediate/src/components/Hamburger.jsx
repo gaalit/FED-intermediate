@@ -7,7 +7,6 @@ export default function Hamburger({
   selectedCategory,
   setSelectedCategory,
 }) {
-  console.log("categories HAM", categories);
   return (
     <>
       <div
@@ -33,6 +32,7 @@ export default function Hamburger({
 
       <style jsx>{`
         .hamburger {
+          margin-top: 2.5%;
           width: 2rem;
           height: 2rem;
           display: flex;

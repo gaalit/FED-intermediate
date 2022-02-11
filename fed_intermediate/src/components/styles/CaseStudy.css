@@ -73,31 +73,11 @@ a {
   color: white;
   line-height: 14px;
   text-decoration: none;
-  z-index: 10;
+  /* z-index: 2; */
   background: transparent;
 }
 
 svg {
   font-size: 25px;
   background: transparent;
-}
-
-@media only screen and (min-width: 1024px) {
-  .case-study-container {
-    display: flex;
-    width: 50%;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0 1%;
-  }
-
-  .case-study-image-wraper {
-    height: 100%;
-    width: 100%;
-  }
-
-  .case-study-link-container {
-    position: sticky;
-    top: 60%;
-  }
 }
