@@ -10,10 +10,9 @@ function App() {
   const [selectedCategory, setSelectedCategory] = useState("All");
   const [caseStudies, setCaseStudies] = useState([]);
 
-  const { height, width } = useWindowDimensions();
+  const { width } = useWindowDimensions();
 
-  console.log(height);
-
+  // fetching category data
   const fetchCategories = () => {
     axios
       .get("https://plankdesign.com/wp-json/plank/v1/fed-test/categories")
@@ -25,6 +24,7 @@ function App() {
       });
   };
 
+  // fetching case studies data
   const fetchCaseStudies = () => {
     axios
       .get("https://plankdesign.com/wp-json/plank/v1/fed-test/case-studies")
@@ -47,10 +47,7 @@ function App() {
       <CaseStudies
         selectedCategory={selectedCategory}
         caseStudies={caseStudies}
-        setCaseStudies={setCaseStudies}
       />
-      <div id="bottom-left-svg"></div>
-      <div id="bottom-right-svg"></div>
     </div>
   );
 }

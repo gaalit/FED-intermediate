@@ -1,5 +1,7 @@
 .case-studies-container {
   margin: 5%;
+  min-height: 500px;
+  position: relative;
 }
 
 @media only screen and (min-width: 1024px) {

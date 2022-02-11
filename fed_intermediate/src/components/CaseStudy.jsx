@@ -12,7 +12,7 @@ const CaseStudy = ({
   return (
     <div className="case-study-container">
       <div className="case-study-image-wraper">
-        <img src={caseImage} />
+        <img src={caseImage} alt="case-study-image" />
       </div>
 
       <div className="case-study-info-container">

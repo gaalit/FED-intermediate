@@ -4,18 +4,17 @@ import Hamburger from "./Hamburger";
 import useWindowDimensions from "./useWindowDimensions";
 
 const Nav = ({ categories, selectedCategory, setSelectedCategory }) => {
+  //state for hamburger menu
   const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
   const toggleHamburger = () => {
     setHamburgerOpen(!hamburgerOpen);
   };
 
   const { width } = useWindowDimensions();
 
-  console.log(categories);
   return (
     <div className="nav-container">
-      <h1>WORK</h1>
+      <h1>work</h1>
       {width <= 875 ? (
         <Hamburger
           categories={categories}
